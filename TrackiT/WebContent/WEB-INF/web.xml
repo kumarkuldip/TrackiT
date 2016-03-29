@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+	<display-name>TrackiT</display-name>
+    <description>
+        This is a simple web application to Track Tickets in any support Project.
+    </description>
+
+	<servlet>
+      <servlet-name>TrackiT</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   
+   <servlet-mapping>
+ 	<servlet-name>TrackiT</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+   
+   	<context-param>
+		<param-name>contextConfigLocation</param-name>		
+		<param-value>WEB-INF/TrackiT-servlet.xml</param-value>
+	</context-param>
+
+	<listener>
+	  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+   
+   
+   <!--  <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.trackit.web.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>com.trackit.web.CommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TicketDetailsServlet</servlet-name>
+        <servlet-class>com.trackit.web.TicketDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/tickets</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/comments</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TicketDetailsServlet</servlet-name>
+        <url-pattern>/showTickets</url-pattern>
+    </servlet-mapping> -->
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
